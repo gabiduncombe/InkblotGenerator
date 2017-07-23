@@ -1,4 +1,4 @@
-int numBatch = 50; //how many images do you want in a batch?
+int numBatch = 100; //how many images do you want in a batch?
 int counter = 0; //starts the counter at 0, counts up every time an image is generated, and is used in draw() to force exit
 float seed = random(0,1000000); //this starts the seed for the perlin noise at a random point
 
@@ -12,7 +12,7 @@ void draw() {
   Wiggler[] inkblots; //start an array of Wigglers (each wiggler is an individual inkblot)
   Wiggler[] whiteinkblots;
   
-  int numBlots = int(random(40,50)); //for each image, generate somewhere between 40 and 50 inkblots
+  int numBlots = int(random(40,50)); //for each image, generate somewhere of a range of inkblots
   
   inkblots = new Wiggler[numBlots]; //create the array and populate it with all the inkblots
   
@@ -20,7 +20,7 @@ void draw() {
   
   for (int i = 0; i < inkblots.length; i++) { //for each item in the array:
       seed += 10;
-      inkblots[i] = new Wiggler(random((2*ellipseMax),width/2),random(ellipseMax*2,height-(2*ellipseMax)),random(7,ellipseMax),0,ellipseMax, seed); //make an inkblot and its mirror. place it well within boundaries of screen, give it a random starting width, and make it black 
+      inkblots[i] = new Wiggler(random((2*ellipseMax),width/2),random(ellipseMax*2,height-(2*ellipseMax)),random(10,ellipseMax),0,ellipseMax, seed); //make an inkblot and its mirror. place it well within boundaries of screen, give it a random starting width, and make it black 
       inkblots[i].setup(); //creates the PShapes that are the inkblots
   }  
     
