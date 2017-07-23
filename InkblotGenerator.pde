@@ -3,7 +3,7 @@ int counter = 0; //starts the counter at 0, counts up every time an image is gen
 float seed = random(0,1000000); //this starts the seed for the perlin noise at a random point
 
 void setup() {
-  size(637,825,P2D); //set up a canvas size. this is an 8.5x11" piece of paper divided into 16 sections 
+  size(825,637,P2D); //set up a canvas. this is an 8.5x11" piece of paper divided into 16 sections (637x825px)
 }
  
 void draw() {
