@@ -12,8 +12,7 @@ void draw() {
   Wiggler[] inkblots; //start an array of Wigglers (each wiggler is an individual inkblot)
   int numBlots = int(random(40,50)); //for each image, generate somewhere between 40 and 50 inkblots
   inkblots = new Wiggler[numBlots]; //create the array and populate it with all the inkblots
-  int numDistortions = int(random(10,11)); //for each image, allow a max number of distortions to the inkblot shape. Raising this value will lead to some really weird spiky shapes and could cause inkblots to distort off the screen and clip.
-  int ellipseMax = int(random(40,55)); //for each image, set a max value for the width of the starting shape
+  int ellipseMax = int(random(40,60)); //for each image, set a max value for the width of the starting shape
   
   for (int i = 0; i < inkblots.length; i++) { //for each item in the array:
       seed += 10;
