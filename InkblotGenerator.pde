@@ -1,6 +1,6 @@
 int numBatch = 50; //how many images do you want in a batch?
 int counter = 0; //starts the counter at 0, counts up every time an image is generated, and is used in draw() to force exit
-float seed = random(0,1000000);
+float seed = random(0,1000000); //this starts the seed for the perlin noise at a random point
 
 void setup() {
   size(637,825,P2D); //set up a canvas size. this is an 8.5x11" piece of paper divided into 16 sections 
@@ -26,7 +26,7 @@ void draw() {
   for (int i = 0; i < inkblots.length; i++) { //for each item in the array:
       inkblots[i].draw(); //draw the inkblots on the screen
     }
-  saveFrame("Inkblots-###.png"); //save each image
+  saveFrame("GeneratedInkblots/" + "Inkblots-###.png"); //save each image
   if (counter == numBatch) { //once the batch # of images has been generated and saved
     exit(); //force exit out of draw(), otherwise draw() will always remain true and will keep looping
   }
