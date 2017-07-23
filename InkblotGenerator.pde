@@ -19,9 +19,6 @@ void draw() {
       seed += 10;
       inkblots[i] = new Wiggler(random((2*ellipseMax),width/2),random(ellipseMax*2,height-(2*ellipseMax)),random(7,ellipseMax),0,ellipseMax, seed); //make an inkblot and its mirror. place it well within boundaries of screen, give it a random starting width, and make it black 
       inkblots[i].setup(); //creates the PShapes that are the inkblots
-      for (int j = 0; j < numDistortions; j++) { //distort the inkblot a few times
-        //inkblots[i].distort();
-      }
   }  
   for (int i = 0; i < inkblots.length; i++) { //for each item in the array:
       inkblots[i].draw(); //draw the inkblots on the screen
